@@ -3,9 +3,9 @@ Herhaling van de onderwerpen uit leerjaar 1 en 2
 
 3 voorbeelden waarbij een class **Car** gebruik maakt van een parent **Vehicle**
 
-- [inheritance]()
-- [interface]()
-- [abstract class]()
+- [inheritance](inheritance)
+- [interface](interface)
+- [abstract class](abstract-class)
 
 ## Inheritance
 
