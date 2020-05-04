@@ -11,24 +11,26 @@ Herhaling van de onderwerpen uit leerjaar 1 en 2
 
 Mogelijkheid om gemeenschappelijke code onder te brengen in een parent class
 
-- Spreiding van verantwoordelijkheid.
+- Je kunt op een eenvoudige manier een bestaand object aanpassen, als je een specifieke variant wilt maken, zonder dat je bestaande code hoeft aan te passen.
+- Als je de code spreidt over meerdere classes (parent en child), wordt per object de complexiteit lager. Spreiding van verantwoordelijkheid.
 - Wil je code aanpassen dan hoef je dat maar op 1 plek te doen
-- Je kunt de parent makkelijk uitbreiden met een nieuw child
-- De parent is eventueel te hergebruiken (als bouwblok) in een ander project
+- Je kunt de parent makkelijk uitbreiden met een nieuwe child
 
 ## Interface
 
 Definieert het gedrag van een class. 
 
-- Makkelijk op te zetten. Je hoeft nog niet na te denken over logica
-- Je kunt bij een child class bepaalde functies afdwingen. 
-- Een class kan meerdere interfaces implementeren. Als je een interface als bouwblok ziet, kun je een class opbouwen met meerdere bouwblokken
+- Handig als je classes gemeenschappelijk wilt kunnen behandelen, maar er geen default functionaliteit is.
+- Makkelijk op te zetten. Je hoeft nog niet na te denken over logica.
+- Je kunt bij een class, die de interface implementeert, bepaalde functies afdwingen. 
+- Een class kan meerdere interfaces implementeren. Als je een interface als afspraak ziet, kun je een class opbouwen die aan meerdere afspraken moet voldoen.
 
 ## Abstract class
 
 Kan zowel abstract als non-abstract members hebben
 
 - Heeft het voordeel van een interface wanneer een functie abstract gemaakt is. Een child class moet de functie implmenteren. 
+- De abstracte class is eventueel te hergebruiken (als bouwblok) in een ander project
 - Kan logica bevatten, zodat de logica op 1 plek staat (zie voordeel inheritance)
 - Een child class kan maar van 1 abstract class erven (nadeel ten opzichte van een interface)
 - Van een abstract class kan je geen object maken
