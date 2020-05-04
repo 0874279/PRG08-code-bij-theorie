@@ -1,0 +1,19 @@
+body {
+    margin:0px; padding:0px;
+    background-color:Black;
+}
+
+game * {
+    position: absolute;
+    display: block;
+    margin:0px; padding:0px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+ball-component {
+    background-color:   Red;
+    width:              50px; 
+    height:             50px;
+    border-radius:      25px;
+}
