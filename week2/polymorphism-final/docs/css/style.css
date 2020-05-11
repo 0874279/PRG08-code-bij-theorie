@@ -1,0 +1,28 @@
+body {
+    margin:0px; padding:0px;
+    background-color:Black;
+}
+
+game * {
+    position: absolute;
+    display: block;
+    margin:0px; padding:0px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+game {
+    display: block;
+    width: 800px; height: 600px;
+    background-image: url(../images/background.png);
+}
+
+car-component {
+    width: 145px; height: 52px;
+    background-image: url(../images/car.png);
+}
+
+plane-component {
+    width: 208px; height: 56px;
+    background-image: url(../images/plane.png);
+}
