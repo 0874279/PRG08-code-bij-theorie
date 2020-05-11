@@ -1,20 +1,29 @@
-class Car extends HTMLElement{
-    
-    private posx: number
-    private posy: number
-        
-    constructor() {
-        super()
+/// <reference path="gameobject.ts" />
 
-        let foreground  = document.getElementsByTagName("foreground")[0]
-        foreground.appendChild(this);
+class Car extends GameObject{
         
-        this.posx = 100
-        this.posy = 350
+    constructor(game:Game) {
+        super(game)
+        
+        this.posx = -100
+        this.posy = window.innerHeight - this.clientHeight;
+
+        this.addEventListener("click", (e) => this.onClick(e as MouseEvent))
+        
+    }
+
+    private onClick(e:MouseEvent) {
+        this.game.repairBuildings();
     }
 
     public update():void {
-        this.style.transform = `translate(${this.posx}px, ${this.posy}px)`
+        this.posx++;
+
+        if (this.posx > window.innerWidth) {
+            this.posx = -100;
+        }
+        
+        super.update();
     }
 }
 

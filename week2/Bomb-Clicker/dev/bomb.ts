@@ -1,20 +1,39 @@
-class Bomb extends HTMLElement{
-    
-    private posy: number
-    private posx: number
-        
-    constructor() {
-        super()
+/// <reference path="gameobject.ts" />
 
-        let foreground  = document.getElementsByTagName("foreground")[0]
-        foreground.appendChild(this);
+class Bomb extends GameObject {
+
+    private speed:number;
+           
+    constructor(game:Game) {
+        super(game)
+
+        this.resetPosition();
+
+        this.addEventListener("click", (e) => this.onClick(e as MouseEvent))
         
-        this.posy = 200
-        this.posx = 220
+    }
+
+    private onClick(e:MouseEvent) {
+        this.game.scorePoint();
+        this.resetPosition();
     }
 
     public update():void {
-        this.style.transform = `translate(${this.posx}px, ${this.posy}px)`
+        this.posy += this.speed;
+
+        if (this.posy > window.innerHeight) {
+            this.game.destroyBuilding();
+            this.resetPosition();
+        }
+
+        super.update();
+
+    }
+
+    private resetPosition() {
+        this.speed = 1 + Math.floor(Math.random() * 5);
+        this.posy = (Math.random() * -100) - this.clientHeight;
+        this.posx = Math.floor(Math.random() * (window.innerWidth - this.clientWidth));
     }
 }
 
