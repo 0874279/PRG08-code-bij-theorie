@@ -1,4 +1,4 @@
-class Ball extends HTMLElement{
+abstract class Ball extends HTMLElement{
 
     public readonly gravity    : number = 0.1
     public readonly friction   : number = 0.9
@@ -57,5 +57,3 @@ class Ball extends HTMLElement{
         this.style.transform = "translate("+this.x+"px, "+this.y+"px)"
     }
 }
-
-window.customElements.define("basketball-component", Ball as any)
