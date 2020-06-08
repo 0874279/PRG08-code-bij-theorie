@@ -25,4 +25,4 @@ class Game {
 
 }
 ```
-![UML diagram Singleton pattern](singleton.png)
+![UML diagram Singleton pattern](sIngleton.png)
