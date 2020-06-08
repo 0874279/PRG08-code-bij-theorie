@@ -1,6 +1,6 @@
 # PRG08 Strategy pattern
 
-Codevoorbeeld waarbij het Strategy Pattern is toegepast op een class `Plane`. 
+[Codevoorbeeld](strategy-planes) waarbij het Strategy Pattern is toegepast op een class `Plane`. 
 
 - `Plane` heeft een uitbreiding op basis van een compositie. Dit is een variabele van het type `FlyBehavior`
 - Doordat we 'tegen deze *Interface* programmeren', kunnen we het gedrag 'on runtime' wisselen

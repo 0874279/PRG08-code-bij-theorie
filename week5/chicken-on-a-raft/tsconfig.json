@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "removeComments": true,
+        "noUnusedParameters": true,
+        "sourceMap": true,
+        "outFile": "docs/js/main.js"
+    },
+    "include": [
+        "dev/**/*"
+    ]
+}
