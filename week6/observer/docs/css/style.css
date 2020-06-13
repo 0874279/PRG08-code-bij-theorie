@@ -1,0 +1,37 @@
+body {
+    margin:0px; padding:0px;
+    background-color:#717171;
+}
+
+main * {
+    position: absolute;
+    display: block;
+    margin:0px; padding:0px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+house-component {
+    width: 161px; height: 123px;
+    background-image: url(../images/house.png);
+}
+
+store-component {
+    width: 172px; height: 142px;
+    background-image: url(../images/store.png);
+}
+
+website-component {
+    width: 164px; height: 225px;
+    background-image: url(../images/website.png);
+}
+
+washer-component {
+    width: 99px; height: 88px;
+    background-image: url(../images/washer.png);
+}
+
+notification-component {
+    width: 99px; height: 88px;
+    background-image: url(../images/notification.png);
+}
