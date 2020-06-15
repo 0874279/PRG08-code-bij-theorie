@@ -6,6 +6,10 @@ class Washer extends GameObject {
         this.y = 35
 
         this.draw()
+
+        setTimeout(() => {
+            this.remove()
+        }, 2000);
     }
 }
 

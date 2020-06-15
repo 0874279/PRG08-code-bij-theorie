@@ -16,11 +16,13 @@ class House extends GameObject {
         super();
         this.x = 110;
         this.y = 240;
-        subject.register(this);
+        this.subject = subject;
+        this.subject.register(this);
         this.draw();
     }
     notify() {
         new Notify();
+        this.subject.unregister(this);
     }
 }
 window.customElements.define("house-component", House);
@@ -70,6 +72,9 @@ class Website extends GameObject {
     }
     notify() {
         this.style.backgroundImage = "url(images/website-with-product.png)";
+        setTimeout(() => {
+            this.style.backgroundImage = "url(images/website.png)";
+        }, 2000);
     }
 }
 window.customElements.define("website-component", Website);
@@ -79,6 +84,9 @@ class Notify extends GameObject {
         this.x = 110;
         this.y = 150;
         this.draw();
+        setTimeout(() => {
+            this.remove();
+        }, 2000);
     }
 }
 window.customElements.define("notification-component", Notify);
@@ -88,6 +96,9 @@ class Washer extends GameObject {
         this.x = 315;
         this.y = 35;
         this.draw();
+        setTimeout(() => {
+            this.remove();
+        }, 2000);
     }
 }
 window.customElements.define("washer-component", Washer);

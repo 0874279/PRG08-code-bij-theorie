@@ -1,19 +1,25 @@
 /// <reference path="gameobject.ts" />
 
 class House extends GameObject implements Observer{
+    
+    private subject : Subject
+
     constructor(subject : Subject) {
         super()
 
         this.x = 110
         this.y = 240
 
-        subject.register(this)
+        this.subject = subject
+        this.subject.register(this)
 
         this.draw()
     }
 
     notify(): void {
         new Notify()
+
+        this.subject.unregister(this)
     }
 }
 

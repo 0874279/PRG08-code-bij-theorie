@@ -8,11 +8,13 @@ class Website extends GameObject implements Observer{
         this.y = 300
 
         this.draw()
-
     }
 
     notify(): void {
         this.style.backgroundImage = "url(images/website-with-product.png)"
+        setTimeout(() => {
+            this.style.backgroundImage = "url(images/website.png)"
+        }, 2000);
     }
 
 }

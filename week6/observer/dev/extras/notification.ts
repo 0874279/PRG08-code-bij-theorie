@@ -8,6 +8,10 @@ class Notify extends GameObject {
         this.y = 150
 
         this.draw()
+
+        setTimeout(() => {
+            this.remove()
+        }, 2000);
     }
 }
 
