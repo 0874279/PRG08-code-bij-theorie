@@ -2,6 +2,9 @@
 
 Toevoegen van het Singleton Pattern zodat alle piratenschepen en kapiteinen makkelijk een berichtje op het Messageboard kunnen plaatsen
 
+## UML
+![UML Angry Captain](UML-angry-captain.png)
+
 ## Game play
 
 - [Demo van Angry Captain](https://hr-cmgt.github.io/PRG08-Angry-Captain-completed/)
